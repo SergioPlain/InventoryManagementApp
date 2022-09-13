@@ -1,2 +1,10 @@
 InventoryList As screen:
 
+    Gallery1 As gallery.galleryVertical:
+        Height: =660
+        Items: =CustomGallerySample
+        Layout: =Layout.Vertical
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        Y: =245
+        ZIndex: =1
+

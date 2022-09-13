@@ -1,6 +1,6 @@
 HomeScreen As screen:
 
-    Label1 As label:
+    lblWelcomeMsgHS As label:
         Align: =Align.Center
         Height: =70
         Size: =21
@@ -10,8 +10,9 @@ HomeScreen As screen:
         Y: =40
         ZIndex: =1
 
-    Button1 As button:
+    btnInventoryListHS As button:
         Height: =70
+        OnSelect: =Navigate(InventoryList)
         Size: =24
         Text: ="Inventory List"
         Width: =280
@@ -19,21 +20,13 @@ HomeScreen As screen:
         Y: =230
         ZIndex: =2
 
-    Button1_1 As button:
+    btnWarehouseListHS As button:
         Height: =70
+        OnSelect: =Navigate(WarehouseList)
         Size: =24
         Text: ="Warehouse List"
         Width: =280
         X: =180
         Y: =370
         ZIndex: =3
-
-    Button1_2 As button:
-        Height: =70
-        Size: =24
-        Text: ="Details Form"
-        Width: =280
-        X: =180
-        Y: =522
-        ZIndex: =4
 

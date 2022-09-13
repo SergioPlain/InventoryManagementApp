@@ -34,7 +34,7 @@
       "enableeditcacherefreshfrequency": false,
       "enableexcelonlinebusinessv2connector": true,
       "enableideaspanel": true,
-      "enableonstart": false,
+      "enableonstart": true,
       "enableonstartnavigate": false,
       "enablepcfmoderndatasets": true,
       "enablepowerautomatepane": true,
