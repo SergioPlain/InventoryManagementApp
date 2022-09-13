@@ -106,6 +106,9 @@
     "UserLocale": "es-ES"
   },
   "ScreenOrder": [
-    "Screen1"
+    "HomeScreen",
+    "InventoryList",
+    "WarehouseList",
+    "InventoryDetail"
   ]
 }
