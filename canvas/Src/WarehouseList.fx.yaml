@@ -1,2 +1,63 @@
 WarehouseList As screen:
 
+    Gallery1_1 As gallery.galleryVertical:
+        Height: =879
+        Items: =colWarehouseList
+        Layout: =Layout.Vertical
+        OnSelect: |-
+            =Navigate(InventoryDetail,ScreenTransition.Fade, {locItem: ThisItem})
+        TemplatePadding: =0
+        TemplateSize: =215
+        Y: =257
+        ZIndex: =1
+
+        Label1_1 As label:
+            Height: =65
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.location
+            Width: =420
+            X: =18
+            Y: =60
+            ZIndex: =2
+
+        Label2_2 As label:
+            Height: =62
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =CountRows(Filter(colInventoryList,warehouse.id = ThisItem.id))
+            Width: =67
+            X: =518
+            Y: =139
+            ZIndex: =3
+
+        Label3_1 As label:
+            Height: =75
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.name
+            Width: =420
+            X: =18
+            Y: =10
+            ZIndex: =4
+
+        Label2_3 As label:
+            Align: =Align.Right
+            Height: =62
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Num. Items:"
+            Width: =217
+            X: =301
+            Y: =139
+            ZIndex: =5
+
+        Rectangle1_1 As rectangle:
+            BorderThickness: =1
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =Parent.Width
+            ZIndex: =6
+

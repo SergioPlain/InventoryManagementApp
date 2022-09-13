@@ -1,2 +1,75 @@
 InventoryDetail As screen:
 
+    Label4 As label:
+        Height: =70
+        Size: =21
+        Text: ="Name"
+        Width: =560
+        X: =30
+        Y: =145
+        ZIndex: =1
+
+    TextInput1 As text:
+        Default: =locItem.title
+        Height: =70
+        Size: =21
+        Width: =560
+        X: =30
+        Y: =215
+        ZIndex: =2
+
+    Label4_1 As label:
+        Height: =70
+        Size: =21
+        Text: ="Description"
+        Width: =560
+        X: =30
+        Y: =350
+        ZIndex: =3
+
+    TextInput1_1 As text:
+        Default: =locItem.description
+        Height: =220
+        Mode: =TextMode.MultiLine
+        Size: =21
+        Width: =560
+        X: =30
+        Y: =425
+        ZIndex: =4
+
+    Label4_2 As label:
+        Height: =70
+        Size: =21
+        Text: ="Num. Items"
+        Width: =210
+        X: =30
+        Y: =740
+        ZIndex: =5
+
+    TextInput2 As text:
+        Align: =Align.Center
+        Default: =locItem.numStock
+        Format: =TextFormat.Number
+        Height: =85
+        HintText: =""
+        PaddingLeft: =5
+        Size: =21
+        Width: =85
+        X: =390
+        Y: =732
+        ZIndex: =6
+
+    Icon1 As icon.Add:
+        Icon: =Icon.Add
+        OnSelect: =
+        X: =485
+        Y: =746
+        ZIndex: =7
+
+    Rectangle2 As rectangle:
+        Height: =4
+        Width: =64
+        X: =310
+        Y: =774
+        ZIndex: =8
+

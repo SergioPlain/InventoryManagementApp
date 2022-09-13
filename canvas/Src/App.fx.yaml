@@ -1,4 +1,25 @@
 App As appinfo:
     BackEnabled: =false
+    OnStart: |-
+        =ClearCollect(colInventoryList, Table(
+            {id:1, image:SampleImage ,title:"Prueba1", description:"Descripción prueba1", numStock:10, warehouse:{id:1,name:"Warehouse1", location:"Location1"}},
+            {id:2, image:SampleImage ,title:"Prueba2", description:"Descripción prueba2", numStock:20, warehouse:{id:2,name:"Warehouse2", location:"Location2"}},
+            {id:3, image:SampleImage ,title:"Prueba3", description:"Descripción prueba3", numStock:30, warehouse:{id:1,name:"Warehouse1", location:"Location1"}},
+            {id:4, image:SampleImage ,title:"Prueba4", description:"Descripción prueba4", numStock:40, warehouse:{id:3,name:"Warehouse3", location:"Location3"}},
+            {id:5, image:SampleImage ,title:"Prueba5", description:"Descripción prueba5", numStock:50, warehouse:{id:5,name:"Warehouse5", location:"Location5"}},
+            {id:6, image:SampleImage ,title:"Prueba6", description:"Descripción prueba6", numStock:60, warehouse:{id:1,name:"Warehouse1", location:"Location1"}},
+            {id:7, image:SampleImage ,title:"Prueba7", description:"Descripción prueba7", numStock:70, warehouse:{id:2,name:"Warehouse2", location:"Location2"}},
+            {id:8, image:SampleImage ,title:"Prueba8", description:"Descripción prueba8", numStock:80, warehouse:{id:4,name:"Warehouse4", location:"Location4"}},
+            {id:9, image:SampleImage ,title:"Prueba9", description:"Descripción prueba9", numStock:90, warehouse:{id:4,name:"Warehouse4", location:"Location4"}}
+            )
+        );
+        ClearCollect(colWarehouseList,Table(
+            {id:1,name:"Warehouse1", location:"Location1"},
+            {id:2,name:"Warehouse2", location:"Location2"},
+            {id:3,name:"Warehouse3", location:"Location3"},
+            {id:4,name:"Warehouse4", location:"Location4"},
+            {id:5,name:"Warehouse5", location:"Location5"}
+            )
+        )
     StartScreen: =
 

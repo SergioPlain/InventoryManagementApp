@@ -1,10 +1,74 @@
 InventoryList As screen:
 
     Gallery1 As gallery.galleryVertical:
-        Height: =660
-        Items: =CustomGallerySample
+        Height: =879
+        Items: =colInventoryList
         Layout: =Layout.Vertical
-        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
-        Y: =245
+        OnSelect: |-
+            =Navigate(InventoryDetail,ScreenTransition.Fade, {locItem: ThisItem})
+        TemplatePadding: =0
+        TemplateSize: =215
+        Y: =257
         ZIndex: =1
+
+        Image1 As image:
+            Image: =ThisItem.image
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =100
+            RadiusBottomRight: =100
+            RadiusTopLeft: =100
+            RadiusTopRight: =100
+            X: =12
+            Y: =10
+            ZIndex: =1
+
+        Label1 As label:
+            Height: =65
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.description
+            Width: =420
+            X: =200
+            Y: =60
+            ZIndex: =2
+
+        Label2 As label:
+            Height: =62
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.numStock
+            Width: =67
+            X: =518
+            Y: =139
+            ZIndex: =3
+
+        Label3 As label:
+            Height: =75
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.title
+            Width: =420
+            X: =200
+            Y: =10
+            ZIndex: =4
+
+        Label2_1 As label:
+            Align: =Align.Right
+            Height: =62
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Num. Items:"
+            Width: =217
+            X: =301
+            Y: =139
+            ZIndex: =5
+
+        Rectangle1 As rectangle:
+            BorderThickness: =1
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =Parent.Width
+            ZIndex: =6
 
